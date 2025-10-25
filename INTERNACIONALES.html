@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Noticias SA Nacional - Internacionales</title>
+    <link rel="stylesheet" href="estiloInicio.css" />
+    <style>
+      /* Estilos específicos para la página Internacionales */
+      body {
+        background-color: #2c3e50; /* Color diferente al de inicio */
+      }
+      
+      /* Estilo para los enlaces de fuentes internacionales */
+      .fuente-noticia {
+        display: block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      
+      .fuente-noticia:hover {
+        background-color: #2980b9;
+        color: white;
+      }
+      
+      /* Ajuste para las imágenes en noticias internacionales */
+      .noticias article img {
+        height: 180px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Parte superior del banner-->
+    <div class="banner"></div>
+
+    <!--Sección del Logo de Noticias SA Nacional-->
+    <header class="logo-header">
+      <img
+        src="SA Nacional logo.png"
+        alt="Logo de Noticias SA Nacional"
+        class="logo"
+      />
+    </header>
+
+    <!--Encabezado de la página Internacionales con título y menú de navegación-->
+    <header class="site-header">
+      <div class="container">
+        <h1>Noticias Internacionales</h1>
+        <nav>
+          <ul>
+            <li>
+              <b><a href="inicio.html">Home</a></b>
+            </li>
+            <li>
+              <b><a href="DEPORTIVAS.html">Noticias Deportivas</a></b>
+            </li>
+            <li>
+              <b><a href="INTERNACIONALES.html">Noticias Internacionales</a></b>
+            </li>
+            <li>
+              <b><a href="CONTACTO.html">Información de Contacto</a></b>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!--Sección de Noticias Internacionales-->
+      <section class="noticias container">
+        <article>
+          <h3>Incendio forestal arrasa con miles de hectáreas en Australia</h3>
+          <img src="Incendio.jpg" alt="Incendio forestal en Australia" />
+          <a href="https://www.bbc.com/mundo" class="fuente-noticia">BBC Mundo</a>
+        </article>
+
+        <article>
+          <h3>Elecciones presidenciales en Francia generan incertidumbre en Europa</h3>
+          <img src="Francia.jpg" alt="Elecciones en Francia" />
+          <a href="https://www.eltiempo.com/mundo" class="fuente-noticia">El Tiempo Mundo</a>
+        </article>
+
+        <article>
+          <h3>Descubrimiento arqueológico en Egipto revela nuevos secretos</h3>
+          <img src="Egipto.jfif" alt="Descubrimiento arqueológico en Egipto" />
+          <a href="https://www.nationalgeographic.com.es" class="fuente-noticia">National Geographic</a>
+        </article>
+      </section>
+    </main>
+
+    <!--Pie de página con menú secundario-->
+    <footer class="site-footer">
+      <ul class="footer-list container">
+        <li>
+          <b><a href="inicio.html">Home</a></b>
+        </li>
+        <li>
+          <b><a href="DEPORTIVAS.html">Noticias Deportivas</a></b>
+        </li>
+        <li>
+          <b><a href="INTERNACIONALES.html">Noticias Internacionales</a></b>
+        </li>
+        <li>
+          <b><a href="CONTACTO.html">Información de Contacto</a></b>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
