@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias SA Nacional - Información de Contacto</title>
+    <!-- Enlace al archivo CSS principal del sitio -->
+    <link rel="stylesheet" href="estiloInicio.css" />
+    <style>
+      /* ===== ESTILOS ADICIONALES PARA LA PÁGINA DE CONTACTOS ===== */
+
+      /* Grid responsivo para las tarjetas de contacto */
+      .contacts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 40px 20px;
+      }
+
+      /* Estilo de cada tarjeta individual de contacto */
+      .contact-card {
+        background-color: #1e3a3a; /* Mismo color de fondo que los artículos de noticias */
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Efecto hover para las tarjetas (elevación y brillo) */
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+      }
+
+      /* Contenedor circular para la foto de perfil */
+      .photo-container {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+        border-radius: 50%; /* Hace la imagen circular */
+        overflow: hidden;
+        border: 4px solid aqua; /* Borde color aqua del sitio */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #2c5555 0%, #1e3a3a 100%);
+      }
+
+      /* Estilo de la imagen de contacto */
+      .contact-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantiene las proporciones */
+        display: block;
+      }
+
+      /* Nombre del contacto */
+      .contact-name {
+        font-size: 1.5rem;
+        color: darkturquoise; /* Color consistente con el sitio */
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      /* Contenedor de cada detalle (email o teléfono) */
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 12px 0;
+        padding: 10px;
+        background-color: rgba(0, 139, 139, 0.1);
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      /* Efecto hover en los detalles de contacto */
+      .contact-detail:hover {
+        background-color: rgba(0, 255, 255, 0.15);
+      }
+
+      /* Iconos SVG para email y teléfono */
+      .icon {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2;
+        color: aqua; /* Color de iconos */
+        flex-shrink: 0;
+      }
+
+      /* Enlaces de email y teléfono */
+      .contact-detail a {
+        color: darkturquoise;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        word-break: break-word; /* Evita que los emails largos rompan el diseño */
+      }
+
+      /* Efecto hover en los enlaces */
+      .contact-detail a:hover {
+        color: aqua;
+      }
+
+      /* Contenedor de información de contacto */
+      .contact-info {
+        color: azure;
+      }
+
+      /* Título de la página */
+      .page-title {
+        text-align: center;
+        margin: 30px 0;
+        color: azure;
+      }
+
+      /* ===== RESPONSIVE DESIGN ===== */
+
+      /* Dispositivos móviles: una sola columna */
+      @media (max-width: 640px) {
+        .contacts-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Tablets: dos columnas */
+      @media (min-width: 641px) and (max-width: 980px) {
+        .contacts-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== BANNER SUPERIOR ===== -->
+    <div class="banner"></div>
+
+    <!-- ===== SECCIÓN DEL LOGO ===== -->
+    <header class="logo-header">
+      <img
+        src="SA Nacional logo.png"
+        alt="Logo de Noticias SA Nacional"
+        class="logo"
+      />
+    </header>
+
+    <!-- ===== ENCABEZADO CON TÍTULO Y MENÚ DE NAVEGACIÓN ===== -->
+    <header class="site-header">
+      <div class="container">
+        <h1>Información de Contacto</h1>
+
+        <!-- Menú de navegación principal -->
+        <nav>
+          <ul>
+            <li>
+              <b><a href="inicio.html">Home</a></b>
+            </li>
+            <li>
+              <b><a href="DEPORTIVAS.html">Noticias Deportivas</a></b>
+            </li>
+            <li>
+              <b><a href="INTERNACIONALES.html">Noticias Internacionales</a></b>
+            </li>
+            <li>
+              <b><a href="CONTACTO.html">Información de Contacto</a></b>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+      <section class="container">
+        <!-- Título de la sección de contactos -->
+        <h2 class="page-title">Nuestro Equipo</h2>
+
+        <!-- Grid de tarjetas de contacto -->
+        <div class="contacts-grid">
+          <!-- ===== CONTACTO 1: JEREMY RODRIGUEZ ===== -->
+          <div class="contact-card">
+            <!-- Contenedor de la foto de perfil -->
+            <div class="photo-container">
+              <img
+                src="jeremy-rodriguez.jpg"
+                alt="Jeremy Rodriguez"
+                class="contact-photo"
+              />
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <h3 class="contact-name">Jeremy Rodriguez</h3>
+
+              <!-- Email -->
+              <div class="contact-detail">
+                <!-- Icono de correo electrónico -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a href="mailto:jeremy.rodriguez@email.com"
+                  >jeremy.rodriguez@email.com</a
+                >
+              </div>
+
+              <!-- Teléfono -->
+              <div class="contact-detail">
+                <!-- Icono de teléfono -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CONTACTO 2: JOSEPH GUERRA ===== -->
+          <div class="contact-card">
+            <!-- Contenedor de la foto de perfil -->
+            <div class="photo-container">
+              <img
+                src="joseph-guerra.jpg"
+                alt="Joseph Guerra"
+                class="contact-photo"
+              />
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <h3 class="contact-name">Joseph Guerra</h3>
+
+              <!-- Email -->
+              <div class="contact-detail">
+                <!-- Icono de correo electrónico -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a href="mailto:joseph.guerra@email.com"
+                  >joseph.guerra@email.com</a
+                >
+              </div>
+
+              <!-- Teléfono -->
+              <div class="contact-detail">
+                <!-- Icono de teléfono -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <a href="tel:+1234567891">+1 (234) 567-891</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CONTACTO 3: CARLOS CONCEPCIÓN ===== -->
+          <div class="contact-card">
+            <!-- Contenedor de la foto de perfil -->
+            <div class="photo-container">
+              <img
+                src="carlos-concepcion.jpg"
+                alt="Carlos Concepción"
+                class="contact-photo"
+              />
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <h3 class="contact-name">Carlos Concepción</h3>
+
+              <!-- Email -->
+              <div class="contact-detail">
+                <!-- Icono de correo electrónico -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a href="mailto:carlos.concepcion@email.com"
+                  >carlos.concepcion@email.com</a
+                >
+              </div>
+
+              <!-- Teléfono -->
+              <div class="contact-detail">
+                <!-- Icono de teléfono -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <a href="tel:+1234567892">+1 (234) 567-892</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== CONTACTO 4: DANIEL COMRIE ===== -->
+          <div class="contact-card">
+            <!-- Contenedor de la foto de perfil -->
+            <div class="photo-container">
+              <img
+                src="daniel-comrie.jpg"
+                alt="Daniel Comrie"
+                class="contact-photo"
+              />
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+              <h3 class="contact-name">Daniel Comrie</h3>
+
+              <!-- Email -->
+              <div class="contact-detail">
+                <!-- Icono de correo electrónico -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <a href="mailto:daniel.comrie@email.com"
+                  >daniel.comrie@email.com</a
+                >
+              </div>
+
+              <!-- Teléfono -->
+              <div class="contact-detail">
+                <!-- Icono de teléfono -->
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <a href="tel:+1234567893">+1 (234) 567-893</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin del grid de contactos -->
+      </section>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA CON MENÚ SECUNDARIO ===== -->
+    <footer class="site-footer">
+      <ul class="footer-list container">
+        <li>
+          <b><a href="inicio.html">Home</a></b>
+        </li>
+        <li>
+          <b><a href="DEPORTIVAS.html">Noticias Deportivas</a></b>
+        </li>
+        <li>
+          <b><a href="INTERNACIONALES.html">Noticias Internacionales</a></b>
+        </li>
+        <li>
+          <b><a href="CONTACTO.html">Información de Contacto</a></b>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
